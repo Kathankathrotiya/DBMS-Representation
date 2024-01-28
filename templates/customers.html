@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DBMS Innovative Project</title>
+    <link rel="stylesheet" href="/static/General.css">
+  </head>
+  <body>
+    <div>
+      <h1>Insert a new Customer</h1><form method="post" action="/customers">
+        <label for="cc">Customer City:</label>
+        <input type="text" name="cc" id="cc">
+      
+        <label for="ci">Customer ID:</label>
+        <input type="number" name="ci" id="ci">
+      
+        <label for="cs">Customer Street:</label>
+        <input type="text" name="cs" id="cs">
+      
+        <label for="dfs">Days for Shipping (Real):</label>
+        <input type="number" name="dfs" id="dfs">
+      
+        <label for="dfss">Days for Shipment (Scheduled):</label>
+        <input type="number" name="dfss" id="dfss">
+      
+        <label for="ds">Delivery Status:</label>
+        <select name="ds" id="ds">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+      
+        <label for="ldr">Late Delivery Risk:</label>
+        <input type="number" name="ldr" id="ldr">
+      
+        <label for="pm">Payment Method:</label>
+        <input type="text" name="pm" id="pm">
+      
+        <label for="fn">First Name:</label>
+        <input type="text" name="fn" id="fn">
+      
+        <label for="ln">Last Name:</label>
+        <input type="text" name="ln" id="ln">
+      
+        <label for="pc">pincode:</label>
+        <input type="number" name="pc" id="pc">
+      
+        <input type="submit" value="Submit">
+      </form>      
+  <div>
+    <center>
+      <table>
+        {% for row in results %}
+        <tr>
+          {% for column in row %}
+          <td>{{ column }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </table>
+    </center>
+  </div>
+</body>
+</html>

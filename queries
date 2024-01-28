@@ -1,0 +1,16 @@
+SELECT * FROM orders WHERE `Order Status` = 'COMPLETE'; 
+SELECT * FROM products WHERE `price` > 500;
+SELECT `Order Id`, `Customer Id`, `Order Total` FROM orders WHERE `Order Total` >= 1000;
+SELECT title, rating FROM products WHERE rating >= 4;
+SELECT `Customer Id`, `First Name` FROM customers WHERE `Delivery Status` = 'Late delivery risk';
+SELECT `Order Id`, `Order Total` FROM orders WHERE `discount percent` >= 0.05;
+UPDATE products SET discountedPrice = 100 WHERE `price` < 80;
+UPDATE orders SET `Shipping Mode` = 'Express Class' WHERE `Order Id` = 180517;
+UPDATE customers SET `Customer City` = 'San Juan' WHERE `Customer Id` = 20755;
+UPDATE products SET rating = 4.5 WHERE `Item Id` = 91;
+UPDATE orders SET `Order Total` = 1000 WHERE `Customer Id` = 6400146; 
+DELETE FROM orders WHERE `Shipping Mode` = 'Second Class';
+DELETE FROM orders WHERE `Order Status` = 'COMPLETE';
+DELETE FROM products WHERE rating < 2;
+DELETE FROM customers WHERE `Customer City` = 'Caguas';
+DELETE FROM orders WHERE `Order Id` > 77200;

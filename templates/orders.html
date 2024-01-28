@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DBMS Innovative Project</title>
+    <link rel="stylesheet" href="/static/General.css">
+ </head>
+  <body>
+    <div>
+      <h1>Insert a new Orders</h1><form method="post" action="/orders">
+        <label for="oi">Order ID:</label>
+        <input type="number" name="oi" id="oi">
+      
+        <label for="os">Order Status:</label>
+        <input type="text" name="os" id="os">
+      
+        <label for="sm">Shipping Mode:</label>
+        <input type="text" name="sm" id="sm">
+      
+        <label for="sd">Shipping Date:</label>
+        <input type="date" name="sd" id="sd">
+      
+        <label for="od">Order Date:</label>
+        <input type="date" name="od" id="od">
+      
+        <label for="ci">Customer ID:</label>
+        <input type="number" name="ci" id="ci">
+      
+        <label for="dp">Discount Percent:</label>
+        <input type="number" name="dp" id="dp" step="0.01">
+      
+        <label for="ot">Order Total:</label>
+        <input type="number" name="ot" id="ot" step="0.01">
+      
+        <label for="ii">Item ID:</label>
+        <input type="number" name="ii" id="ii">
+      
+        <label for="pp">Product Price:</label>
+        <input type="number" name="pp" id="pp" step="0.01">
+      
+        <label for="oq">Order Quantity:</label>
+        <input type="number" name="oq" id="oq">
+      
+        <label for="ppo">Profit per Order:</label>
+        <input type="number" name="ppo" id="ppo" step="0.01">
+      
+        <input type="submit" value="Submit">
+      </form>
+      <div>
+        <center>
+          <table>
+            {% for row in results %}
+            <tr>
+              {% for column in row %}
+              <td>{{ column }}</td>
+              {% endfor %}
+            </tr>
+            {% endfor %}
+          </table>
+        </center>
+      </div>
+</body>
+</html>
